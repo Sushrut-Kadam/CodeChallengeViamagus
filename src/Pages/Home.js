@@ -10,8 +10,7 @@ const Home = () => {
     const [error, setError] = useState(null);
 
     const postsPerPage = 10;
-    const lastPage = Math.ceil(postData.length/postsPerPage);
-
+    
     const fetchData = (postNumber) => {
         fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${postsPerPage}&_start=${postNumber}`)
         .then(response => {
@@ -51,13 +50,13 @@ const Home = () => {
     }
 
     return(
-        <>
+        <div className="bodyWrapper">
             <PostFeed posts={postData} />
             <div className="paginationButtons">
-                <button onClick={handlePrevButtonClick} disabled={postNumber === 1}>Prev</button>
-                <button onClick={handleNextButtonClick} disabled={postNumber === lastPage}>Next</button>
+                <button onClick={handlePrevButtonClick} disabled={postNumber === 0}>Prev</button>
+                <button onClick={handleNextButtonClick} disabled={postNumber === 90}>Next</button>
             </div>
-        </>
+        </div>
     );
 }
 

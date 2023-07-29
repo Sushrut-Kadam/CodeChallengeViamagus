@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../css/newpost.css";
 
 const NewPost = (props) => {
@@ -10,6 +11,8 @@ const NewPost = (props) => {
     });
 
     const [error, setError] = useState(null);
+
+    const navigate = useNavigate();
 
     const sendData = (e) => {
         e.preventDefault();
@@ -32,6 +35,10 @@ const NewPost = (props) => {
             console.error("Error sending data :", error);
             setError(error);
         })
+        .finally(() => {
+            alert("Form submitted successfully"); 
+            navigate('/');
+        });
     }
 
     const handleChange = (event) => {
