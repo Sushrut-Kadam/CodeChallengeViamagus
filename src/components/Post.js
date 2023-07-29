@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { useParams } from "react-router-dom";
+import LoadingSpinner from "./LoadingSpinner";
 
 const Post = ({post}) => {
     // console.log(post);
@@ -49,7 +50,7 @@ const PostPage = () => {
 
     if(error) return "Error...!";
 
-    if(loading) return "Loading...";
+    if(loading) return <LoadingSpinner />;
 
     return(
         <Post post={postData}/>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PostFeed from "../components/PostFeed";
-
+import LoadingSpinner from "../components/LoadingSpinner";
 import "../css/home.css";
 
 const Home = () => {
@@ -37,8 +37,8 @@ const Home = () => {
 
     if(error) return "Error...!";
 
-    if(loading) return "Loading...";
-    
+    if(loading) return <LoadingSpinner />;
+
     const handlePrevButtonClick = () => {
         console.log("button clicked");
         setPostNumber(postNumber-postsPerPage);
