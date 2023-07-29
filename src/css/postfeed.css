@@ -1,0 +1,7 @@
+.PostWrapper{
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+    border-bottom: 2px solid #f5f4f0;
+}
