@@ -1,0 +1,36 @@
+.FormWrapper{
+    height: 100%;
+}
+
+form{
+    height: 100%;
+}
+
+#title{
+    width: 90%;
+    height: 20%;
+}
+
+#body{
+    width: 90%;
+    height: 70%;
+}
+
+button{
+    display: block;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #0077cc;
+    cursor: pointer;
+
+    :hover{
+        opacity: 0.8;
+    }
+
+    :active{
+        background-color: #005fa3;
+    }
+}

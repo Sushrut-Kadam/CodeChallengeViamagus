@@ -22,7 +22,7 @@ const Home = () => {
             setError(error);
         })
         .finally(() => {
-            setLoading(false);
+            setLoading(false);  
         })
     }
 
