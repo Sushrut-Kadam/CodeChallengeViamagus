@@ -3,11 +3,15 @@ import PostFeed from "../components/PostFeed";
 
 const Home = () => {
     const [postData, setPostData] = useState([]);
+    const [postNumber, setPostNumber] = useState(0);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    const fetchData = () => {
-        fetch("https://jsonplaceholder.typicode.com/posts")
+    const postsPerPage = 10;
+    const lastPage = Math.ceil(postData.length/postsPerPage);
+
+    const fetchData = (postNumber) => {
+        fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${postsPerPage}&_start=${postNumber}`)
         .then(response => {
             if(response.ok){
                 return response.json();
@@ -27,16 +31,30 @@ const Home = () => {
     }
 
     useEffect(() => {
-        fetchData();
-    }, []);
+        fetchData(postNumber);
+    }, [postNumber]);
 
     if(error) return "Error...!";
 
     if(loading) return "Loading...";
+    
+    const handlePrevButtonClick = () => {
+        console.log("button clicked");
+        setPostNumber(postNumber-postsPerPage);
+    }
+
+    const handleNextButtonClick = () => {
+        console.log("button clicked");
+        setPostNumber(postNumber+postsPerPage);
+    }
 
     return(
         <>
             <PostFeed posts={postData} />
+            <div className="paginationButtons">
+                <button onClick={handlePrevButtonClick} disabled={postNumber === 1}>Prev</button>
+                <button onClick={handleNextButtonClick} disabled={postNumber === lastPage}>Next</button>
+            </div>
         </>
     );
 }

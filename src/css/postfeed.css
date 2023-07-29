@@ -5,30 +5,3 @@
     padding-bottom: 2em;
     border-bottom: 2px solid #f5f4f0;
 }
-
-.paginationButtons{
-    width: 80%;
-    height: 40px;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-.paginationButtons a{
-    padding: 8px;
-    margin: 8px;
-    border: 1px solid #2b2b2b;
-    border-radius: 5px;
-    color: #2b2b2b;
-    cursor: pointer;
-}
-
-.paginationButtons a:hover{
-    color: #f5f4f0;
-    background-color: #2b2b2b;
-}
-
-.paginationActive a{
-    color: #f5f4f0;
-    background-color: #2b2b2b;
-}
