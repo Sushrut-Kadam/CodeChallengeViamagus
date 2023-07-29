@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import PostFeed from "../components/PostFeed";
 
+import "../css/home.css";
+
 const Home = () => {
     const [postData, setPostData] = useState([]);
     const [postNumber, setPostNumber] = useState(0);

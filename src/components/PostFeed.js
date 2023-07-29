@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "../css/postfeed.css"
 import {Post} from "./Post";
 import { Link } from "react-router-dom";
+import "../css/postfeed.css"
 
 const PostFeed = ({posts}) => {
     return(
-        <div>
+        <div className="Wrapper">
             {posts.map(post => (
                 <div className="PostWrapper" key={post.id}> 
                     <Post post={post}/>
