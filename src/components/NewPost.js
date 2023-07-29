@@ -51,29 +51,32 @@ const NewPost = (props) => {
     if(error) return "Error...!";
 
     return(
-        <div className="FormWrapper">
-            <form onSubmit={sendData}>
-                <textarea 
-                    required
-                    type="text"
-                    name="title"
-                    id="title"
-                    placeholder="Post title"
-                    value={post.title}
-                    onChange={handleChange}
-                />
-                <textarea
-                    required
-                    type="text"
-                    name="body"
-                    id="body"
-                    placeholder="Post Body"
-                    value={post.body}
-                    maxLength="1000"
-                    onChange={handleChange}
-                />
-                <button type="submit">Save</button>
-            </form>
+        <div>
+            <h2 className="heading">Create a new post</h2>
+            <div className="formWrapper">
+                <form onSubmit={sendData}>
+                    <textarea 
+                        required
+                        type="text"
+                        name="title"
+                        className="title"
+                        placeholder="Post title"
+                        value={post.title}
+                        onChange={handleChange}
+                    />
+                    <textarea
+                        required
+                        type="text"
+                        name="body"
+                        className="body"
+                        placeholder="Post Body"
+                        value={post.body}
+                        maxLength="1000"
+                        onChange={handleChange}
+                    />
+                    <button type="submit">Save</button>
+                </form>
+            </div>
         </div>
     );
 }

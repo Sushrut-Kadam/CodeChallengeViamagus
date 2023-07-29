@@ -4,13 +4,17 @@ import "../css/navigation.css";
 
 const Navigation = () => {
     return(
-        <nav className="NavBar">
-            <ul className="NavList">
+        <nav className="navBar">
+            <ul className="navList">
                 <li>
-                    <Link to={"/"}>Home</Link>
+                    <Link to={"/"} style={{textDecoration: 'none'}} >
+                        <a>Home</a>
+                    </Link>
                 </li>
                 <li>
-                    <Link to={"/newpost"}>New Post</Link>
+                    <Link to={"/newpost"} style={{textDecoration: 'none'}} >
+                        New Post
+                    </Link>
                 </li>
             </ul>
         </nav>

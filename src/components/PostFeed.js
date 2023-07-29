@@ -6,12 +6,17 @@ import "../css/postfeed.css"
 const PostFeed = ({posts}) => {
     return(
         <div>
-            {posts.map(post => (
-                <div className="PostWrapper" key={post.id}> 
-                    <Post post={post}/>
-                    <Link to={`post/${post.id}`}>View Post</Link>
-                </div>
-            ))}
+            <h1 className="heading">All Posts</h1>
+            <div className="blogs-section">
+                {posts.map(post => (
+                    <div className="postWrapper" key={post.id}> 
+                        <Post post={post}/>
+                        <Link to={`post/${post.id}`} style={{textDecoration: 'none'}}>
+                            <button className="btn dark">Read</button>
+                        </Link>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }

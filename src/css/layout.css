@@ -1,4 +1,4 @@
-.Wrapper{
+.wrapper{
     @media(min-width: 700px) {
         display: flex;
         top: 64px;

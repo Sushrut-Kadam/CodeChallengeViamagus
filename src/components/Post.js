@@ -4,15 +4,14 @@ import { useParams } from "react-router-dom";
 import LoadingSpinner from "./LoadingSpinner";
 
 const Post = ({post}) => {
-    // console.log(post);
     return(
         <article className="post">
             <div className="metadata">
                 <div className="metainfo">
-                    <strong>{post.title}</strong><br/>
+                    <h1>{post.id}. {post.title}</h1><br/>
                 </div>
             </div>
-            <ReactMarkdown>{post.body}</ReactMarkdown>
+            <ReactMarkdown className="postbody">{post.body}</ReactMarkdown>
         </article>
     );
 }

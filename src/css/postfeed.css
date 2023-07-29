@@ -1,7 +1,28 @@
-.PostWrapper{
-    max-width: 800px;
-    margin: 0 auto;
+.heading{
+    margin-left: 5%;    
+}
+
+.postWrapper{
+    max-width: 85%;
     margin-bottom: 2em;
     padding-bottom: 2em;
     border-bottom: 2px solid #f5f4f0;
+}
+
+.blogs-section{
+    width: 100%;
+    padding: 5vh 5vw;
+    display: grid;
+    grid-gap: 40px;
+}
+
+.btn.dark{
+    height: 5vh;
+    width: 5vw;    
+    background: #1b1b1b;
+    color: #f5f4f0;
+    border: 1px #1b1b1b solid;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
 }

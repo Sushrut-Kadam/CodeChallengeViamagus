@@ -1,37 +1,79 @@
-.FormWrapper{
-    margin-top: 0.5em;
-    height: 100%;
+.heading{
+    text-align: center;
+    color: #282828;
 }
 
-form{
-    height: 100%;
+.formWrapper{
+    width: 70vw;
+    min-width: 400px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    padding: 50px 0;
 }
 
-#title{
+textarea::-webkit-scrollbar{
+    width: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.title,
+.body{
     width: 90%;
-    height: 20%;
+    min-height: 100px;
+    height: auto;
+    outline: none;
+    color: #2d2d2d;
+    resize: none;
+    padding: 5%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    border-bottom: 1px solid #1b1b1b ;
+    font-size: 20px;
+    font-weight: 200;
 }
 
-#body{
-    width: 90%;
-    height: 65%;
+.title::placeholder,
+.article::placeholder{
+    color: #2d2d2d;
+}
+
+.article{
+    height: 500px;
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    padding-bottom: 100px;
+    white-space: pre-wrap;
 }
 
 button{
-    display: block;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    color: #fff;
-    background-color: #0077cc;
+    height: 5vh;
+    width: 5vw;    
+    background: #1b1b1b;
+    color: #f5f4f0;
+    border: 1px #1b1b1b solid;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
     cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 10%;
+}
 
-    :hover{
-        opacity: 0.8;
-    }
+button:hover{
+    color: #1b1b1b;
+    background-color: #f5f4f0;
+    opacity: 0.8;
+}
 
-    :active{
-        background-color: #005fa3;
-    }
+button:active{
+    color: #1b1b1b;
+    background-color: #f5f4f0;
 }

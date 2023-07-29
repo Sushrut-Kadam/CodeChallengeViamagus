@@ -4,9 +4,9 @@ import "../css/header.css";
 
 const Header = () => {
     return(
-        <header className="HeaderBar">
+        <header className="headerBar">
             <h1>Posts</h1>
-            <div className="Navlink">
+            <div className="navlink">
                 
             </div>
         </header>

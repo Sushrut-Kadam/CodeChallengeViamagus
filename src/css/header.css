@@ -1,4 +1,4 @@
-.HeaderBar{
+.headerBar{
     width: 100%;
     padding: 0.5em 1em;
     display: flex;
@@ -17,6 +17,6 @@ h1{
     display: inline;
 }
 
-.Navlink{
+.navlink{
     margin-left: auto;
 }
