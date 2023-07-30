@@ -33,13 +33,13 @@ const Home = () => {
         })
     }
 
-    const handleButtonClick = async (operation) => {
+    const handleButtonClick = (operation) => {
         if(operation === '-')
-            await setPostNumber(postNumber-postsPerPage);
+            setPostNumber(postNumber-postsPerPage);
 
         if(operation === '+')
-            await setPostNumber(postNumber+postsPerPage);
-
+            setPostNumber(postNumber+postsPerPage);
+ 
         wrapperRef.current.scrollIntoView({
             behaviour: "smooth", 
             inline: "start"
