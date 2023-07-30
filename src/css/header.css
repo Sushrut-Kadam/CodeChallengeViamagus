@@ -16,3 +16,41 @@ h1{
     padding: 0;
     display: inline;
 }
+
+.toggleButton{
+    position: absolute;
+    top: 1.5rem;
+    right: 5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 15px;
+    padding: 0.5rem;
+    border: 2px #2b2b2b solid;
+    border-radius: 10px;
+    background-color: #f5f4f0;
+}
+
+.toggleButton .bar{
+    height: 2px;
+    width: 100%;
+    background-color: #2b2b2b;
+}
+
+@media (max-width: 700px){
+    .headerBar button{
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+
+    .toggleButton{
+        display: flex;
+    }
+
+    .toggleButton:hover{
+        background-color: #9f9f9f;
+        cursor: pointer;
+    }
+}
