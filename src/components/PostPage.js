@@ -20,7 +20,6 @@ const PostPage = () => {
             throw response;
         })
         .then(data => {
-            console.log(data)
             setPostData(data);
         })
         .catch(error => {
