@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/newpost.css";
+import "../css/index.css";
 
 const NewPost = (props) => {
     const [post, setPost] = useState({
@@ -74,7 +75,7 @@ const NewPost = (props) => {
                         maxLength="1000"
                         onChange={handleChange}
                     />
-                    <button type="submit">Save</button>
+                    <button type="submit" className="btn dark">Save</button>
                 </form>
             </div>
         </div>

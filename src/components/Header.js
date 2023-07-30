@@ -6,9 +6,6 @@ const Header = () => {
     return(
         <header className="headerBar">
             <h1>Posts</h1>
-            <div className="navlink">
-                
-            </div>
         </header>
     );
 }

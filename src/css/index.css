@@ -1,0 +1,31 @@
+.btn.dark{
+    height: 5vh;
+    width: 5vw;
+    background: #1b1b1b;
+    color: #f5f4f0;
+    border: 1px #1b1b1b solid;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 200;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 980px){
+    .btn.dark{
+        width: 8vw;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .btn.dark{
+        width: 15vw;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .btn.dark{
+        width: 25vw;
+    }
+}

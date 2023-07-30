@@ -1,7 +1,8 @@
 import React from "react";
 import {Post} from "./Post";
 import { Link } from "react-router-dom";
-import "../css/postfeed.css"
+import "../css/postfeed.css";
+import "../css/index.css";
 
 const PostFeed = ({posts}) => {
     return(
