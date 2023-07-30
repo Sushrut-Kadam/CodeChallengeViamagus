@@ -1,0 +1,15 @@
+.postView{
+    margin: 2%;
+    padding: 2%;
+}
+
+.metadata{
+    @media (min-width: 500px){
+        display: flex;
+        align-items: top;
+    }
+}
+
+.metainfo{
+    padding-right: 1em;
+}

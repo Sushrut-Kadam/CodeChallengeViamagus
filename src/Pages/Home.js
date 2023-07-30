@@ -40,7 +40,10 @@ const Home = () => {
         if(operation === '+')
             await setPostNumber(postNumber+postsPerPage);
 
-        wrapperRef.current.scrollIntoView({behaviour: 'smooth'});
+        wrapperRef.current.scrollIntoView({
+            behaviour: "smooth", 
+            inline: "start"
+        });
     }
 
     useEffect(() => {
@@ -52,7 +55,7 @@ const Home = () => {
     if(loading) return <LoadingSpinner />;
 
     return(
-        <div className="bodyWrapper" ref={wrapperRef}>
+        <div ref={wrapperRef}>
             <h1 className="heading">All Posts</h1>
             <div>
                 <PostFeed posts={postData} />

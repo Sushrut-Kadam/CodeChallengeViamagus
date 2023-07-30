@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./Pages/Home";
 import NewPost from "./components/NewPost";
-import {PostPage} from "./components/Post";
+import {PostPage} from "./components/PostPage";
 
 
 const App = () => {

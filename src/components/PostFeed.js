@@ -9,7 +9,7 @@ const PostFeed = ({posts}) => {
             <div className="blogs-section">
                 {posts.map(post => (
                     <div className="postWrapper" key={post.id}> 
-                        <Post post={post}/>
+                        <Post post={post} showId={true}/>
                         <Link to={`post/${post.id}`} style={{textDecoration: 'none'}}>
                             <button className="btn dark">Read</button>
                         </Link>
