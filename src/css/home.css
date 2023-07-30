@@ -1,12 +1,14 @@
 .paginationButtons{
     width: 80%;
-    height: 40px;
+    margin-bottom: 2%;
+    padding-bottom: 2%;
     display: flex;
     justify-content: center;
 }
  
 .paginationButtons button{
     padding: 0px;
+    width: 5vw;
     text-align: center;
     margin: 0 5px;
     border: 1px solid #2b2b2b;
@@ -19,4 +21,22 @@
 .paginationButtons button:hover{
     color: #f5f4f0;
     background-color: #2b2b2b;
+}
+
+@media screen and (max-width: 980px){
+    .paginationButtons button{
+        width: 8vw;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .paginationButtons button{
+        width: 15vw;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .paginationButtons button{
+        width: 25vw;
+    }
 }
