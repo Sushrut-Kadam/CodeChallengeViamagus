@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import PostFeed from "../components/PostFeed";
 import LoadingSpinner from "../components/LoadingSpinner";
 import "../css/home.css";
@@ -8,6 +8,8 @@ const Home = () => {
     const [postNumber, setPostNumber] = useState(0);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
+    const wrapperRef = useRef(null);
 
     const postsPerPage = 10;
     
@@ -31,6 +33,16 @@ const Home = () => {
         })
     }
 
+    const handleButtonClick = async (operation) => {
+        if(operation === '-')
+            await setPostNumber(postNumber-postsPerPage);
+
+        if(operation === '+')
+            await setPostNumber(postNumber+postsPerPage);
+
+        wrapperRef.current.scrollIntoView({behaviour: 'smooth'});
+    }
+
     useEffect(() => {
         fetchData(postNumber);
     }, [postNumber]);
@@ -39,22 +51,15 @@ const Home = () => {
 
     if(loading) return <LoadingSpinner />;
 
-    const handlePrevButtonClick = () => {
-        console.log("button clicked");
-        setPostNumber(postNumber-postsPerPage);
-    }
-
-    const handleNextButtonClick = () => {
-        console.log("button clicked");
-        setPostNumber(postNumber+postsPerPage);
-    }
-
     return(
-        <div className="bodyWrapper">
-            <PostFeed posts={postData} />
-            <div className="paginationButtons">
-                <button onClick={handlePrevButtonClick} disabled={postNumber === 0}>Prev</button>
-                <button onClick={handleNextButtonClick} disabled={postNumber === 90}>Next</button>
+        <div className="bodyWrapper" ref={wrapperRef}>
+            <h1 className="heading">All Posts</h1>
+            <div>
+                <PostFeed posts={postData} />
+                <div className="paginationButtons">
+                    <button onClick={() => handleButtonClick('-')} disabled={postNumber === 0}>Prev</button>
+                    <button onClick={() => handleButtonClick('+')} disabled={postNumber === 90}>Next</button>
+                </div>
             </div>
         </div>
     );

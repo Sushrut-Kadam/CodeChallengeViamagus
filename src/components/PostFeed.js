@@ -6,7 +6,6 @@ import "../css/postfeed.css"
 const PostFeed = ({posts}) => {
     return(
         <div>
-            <h1 className="heading">All Posts</h1>
             <div className="blogs-section">
                 {posts.map(post => (
                     <div className="postWrapper" key={post.id}> 
