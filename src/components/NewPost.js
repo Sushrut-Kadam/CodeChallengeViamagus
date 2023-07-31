@@ -12,7 +12,7 @@ const NewPost = (props) => {
     });
 
     const [error, setError] = useState(null);
-
+    
     const navigate = useNavigate();
 
     const sendData = (e) => {
@@ -46,7 +46,7 @@ const NewPost = (props) => {
         setPost({
             ...post, 
             [event.target.name]: [event.target.value]
-        })
+        });
     }
     
     if(error) return "Error...!";
@@ -72,9 +72,11 @@ const NewPost = (props) => {
                         className="body"
                         placeholder="Post Body"
                         value={post.body}
-                        maxLength="1000"
+                        maxLength="50"
                         onChange={handleChange}
                     />
+                    <p>{`characters typed: ${post.body.toString().length}`}</p>
+                    {(post.body.toString().length==50)?<p>Max limit reached...!</p>:null}
                     <button type="submit" className="btn dark">Save</button>
                 </form>
             </div>

@@ -5,7 +5,7 @@
 
 .formWrapper{
     width: 70vw;
-    min-width: 400px;
+    /* min-width: 400px; */
     height: 100px;
     display: block;
     margin: auto;
@@ -40,4 +40,10 @@ textarea::-webkit-scrollbar-thumb{
 .title::placeholder,
 .body::placeholder{
     color: #2d2d2d;
+}
+
+@media (max-width: 480px){
+    .formWrapper{
+        width: 80vw;
+    }
 }

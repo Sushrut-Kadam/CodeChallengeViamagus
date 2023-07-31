@@ -12,7 +12,7 @@ const PostPage = () => {
     const [loading, setLoading] = useState(true);
 
     const fetchData = () => {
-        fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)   
+        fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
         .then(response => {
             if(response.ok){
                 return response.json();
